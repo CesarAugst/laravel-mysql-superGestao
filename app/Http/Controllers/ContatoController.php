@@ -33,7 +33,7 @@ class ContatoController extends Controller
             'required' => 'O campo :attribute deve ser preenchido'
         ];
         $request->validate($regras,$feedback);
-        
+
         SiteContato::create($request->all());
         return redirect()->route('site.index');
     }
